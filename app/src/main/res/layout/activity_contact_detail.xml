@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDetailActivity">
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        tools:srcCompat="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="Bruna"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/iv_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"/>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:text="09090909"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_profile"/>
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+    
+    <ImageView
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:tint="#FF0000"
+        android:src="@drawable/baseline_auto_delete_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+        android:contentDescription="@null"/>
+
+    <ImageView
+        android:id="@+id/img_call"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:tint="@android:color/holo_green_dark"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_phone_enabled_24"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile"
+        android:contentDescription="@null"/>
+
+    <TextView
+        android:id="@+id/tv_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send message"
+        android:textColor="#0000FF"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imageButton2"/>
+
+    <TextView
+        android:id="@+id/tv_share_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share contact"
+        android:textColor="#0000FF"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_send_message"/>
+
+    <TextView
+        android:id="@+id/tv_block_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share contact"
+        android:textColor="#FF0000"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_share_contact"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
